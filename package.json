@@ -20,7 +20,7 @@
     "serve:web": "node scripts/serve-web.js",
     "dev:web": "node scripts/serve-web.js",
     "test:web": "node test/web-pwa.test.js",
-    "test": "node test/web-pwa.test.js"
+    "test": "npm run smoke"
   },
   "author": {
     "name": "theBoringCodes",
@@ -52,6 +52,7 @@
       "main.js",
       "preload.js",
       "src/**/*",
+      "!src/package.json",
       "package.json",
       "!test/out/**"
     ],
