@@ -9,12 +9,18 @@
     "dev": "electron . --dev",
     "smoke": "xvfb-run -a electron . --smoke --no-sandbox",
     "smoke:builtin": "GAZBOARD_DISABLE_LIBREOFFICE=1 xvfb-run -a electron . --smoke --no-sandbox",
+    "smoke:headless": "GAZBOARD_DISABLE_LIBREOFFICE=1 electron . --smoke --no-sandbox --headless",
     "test:restart": "sh test/restart-test.sh",
     "dist": "electron-builder",
     "dist:win": "electron-builder --win",
     "dist:mac": "electron-builder --mac",
     "dist:linux": "electron-builder --linux",
-    "smoke:mac": "electron . --smoke"
+    "smoke:mac": "electron . --smoke",
+    "build:web": "node scripts/build-web.js",
+    "serve:web": "node scripts/serve-web.js",
+    "dev:web": "node scripts/serve-web.js",
+    "test:web": "node test/web-pwa.test.js",
+    "test": "node test/web-pwa.test.js"
   },
   "author": {
     "name": "theBoringCodes",
